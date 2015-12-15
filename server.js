@@ -38,13 +38,13 @@ app.get('/api/beans', function albumsIndex(req, res) {
 //   res.render('test', { title: 'Awesome Post', text: 'Lorem ipsum dolor'});
 // });
 
-var userData = { username: 'sparky', age: 43, firstName: 'Clark', lastName: 'Griswold'};
 
-app.get('/testpage', function(req,res) {
-  res.render('test', {user: userData});
+
+app.get('/beans/:id', function(req,res) {
+	db.Bean.findOne({_id: req.params.id}, function(err, bean){ 
+  		res.render('beans/show', bean);
+	});  		
 });
-
-
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');
