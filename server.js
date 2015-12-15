@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 // serve static files from public folder
+app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -27,15 +28,21 @@ app.get('/', function homepage (req, res) {
 });
 
 
-app.get('/api/beans', function beansIndex(req, res) {
+app.get('/api/beans', function albumsIndex(req, res) {
   db.Bean.find({}, function(err, beans) {
     res.json(beans);
   });
 });
 
+// app.get('/testpage', function(req,res){
+//   res.render('test', { title: 'Awesome Post', text: 'Lorem ipsum dolor'});
+// });
 
+var userData = { username: 'sparky', age: 43, firstName: 'Clark', lastName: 'Griswold'};
 
-
+app.get('/testpage', function(req,res) {
+  res.render('test', {user: userData});
+});
 
 
 
