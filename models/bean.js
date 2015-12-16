@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-
+var Cafe = require('./cafe.js');
 
 var BeanSchema = new Schema({
   beanName: String,
@@ -9,7 +9,7 @@ var BeanSchema = new Schema({
   beanRoast: String,
   beanAcidity: String,
   beanFlavor: String,
-  //beanLocations: [Cafe.schema]
+  beanLocations: [Cafe.schema]
 });
 
 var Bean = mongoose.model('Bean', BeanSchema);

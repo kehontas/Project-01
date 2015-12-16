@@ -45,7 +45,11 @@
 
    
 <ul style="list-style-type:none"><h3>Served at the following locations:</h3>
-<li>Blue Bottle</li>
+  {{#each beanLocations}}
+    <li>Cafe Name: {{cafeName}}</li>
+    <li>Cafe City: {{cafeCity}}</li>
+    <li>URL: <a href="{{cafeURL}}">{{cafeURL}}</a></li> 
+  {{/each}}  
 </ul>
 
   

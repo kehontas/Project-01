@@ -31,20 +31,32 @@ app.get('/', function homepage (req, res) {
 app.get('/api/beans', function albumsIndex(req, res) {
   db.Bean.find({}, function(err, beans) {
     res.json(beans);
-  });
+  	});
 });
 
-// app.get('/testpage', function(req,res){
-//   res.render('test', { title: 'Awesome Post', text: 'Lorem ipsum dolor'});
-// });
-
-
-
-app.get('/beans/:id', function(req,res) {
-	db.Bean.findOne({_id: req.params.id}, function(err, bean){ 
+app.get('/beans/:id', function (req,res) {
+	db.Bean.findOne({_id: req.params.id}, function (err, bean){
+		// bean.locations = [
+		// 					{
+		// 	            		cafeName: 'Blue Bottle',
+		// 	  					cafeCity: 'San Francisco, New York, Los Angeles, Tokyo',
+		// 	  					cafeURL: 'https://bluebottlecoffee.com/',
+		// 		  			},
+		// 		  			{
+		// 		            	cafeName: 'Four Barrel',
+		// 		  				cafeCity: 'San Francisco',
+		// 		  				cafeURL: 'http://fourbarrelcoffee.com/',
+		// 		  			}
+		// 	  			];
   		res.render('beans/show', bean);
 	});  		
 });
+
+ // app.get('/cafes/:id', function (req, res ){
+ // 	db.Cafe.findOne({_id: req.params.id}, function (err, cafe){
+ // 		res.render('beans/show', cafe);
+ // 	});
+ // });
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');

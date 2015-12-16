@@ -14,8 +14,7 @@ $.ajax({
   	success: function (data) { 	
   	console.log("this is my data:", data);	
   	data.forEach(function(e){
-		$("#beans").append("<h4>" + "<a href='/beans/"+ e._id + "'>" + e.beanName + "</a>" + "</h4>" + "<p>" + "Origin: " + e.beanOrigin + "</br>" + "Roast: " +
-			e.beanRoast + "<br>" + "Body: " + e.beanBody + "<br>" + "Acidity: " + e.beanAcidity + "<br>" + "Flavor: " + e.beanFlavor  + "</p>" + "Sample Cafe Data" + "<hr>");
+		$("#beans").append("<h4>" + "<a href='/beans/"+ e._id + "'>" + e.beanName + "</a>" + "<hr>" );
   			
   			});	
 		}
