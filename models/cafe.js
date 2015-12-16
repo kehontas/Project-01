@@ -6,7 +6,7 @@ var CafeSchema = new Schema({
   cafeName: String,
   cafeCity: String,
   cafeUrl: String
-  //beans: [Bean.schema]
+ 
 });
 
 var Cafe = mongoose.model('Cafe', CafeSchema);
