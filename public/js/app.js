@@ -4,10 +4,11 @@ $(document).ready(function() {
   	beans.forEach(function(bean) {
   		renderBean(bean);
   	});
-
-  function renderBean(bean) {
-  console.log('rendering bean:', bean);
-}
+});
+   
+//   function renderBean(bean) {
+//   console.log('rendering bean:', bean);
+// }
 $.ajax({
   	method: "GET",
 	url: "api/beans",
@@ -20,4 +21,4 @@ $.ajax({
 		}
 		});
  	});
-});
+

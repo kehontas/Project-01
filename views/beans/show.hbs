@@ -11,7 +11,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -51,6 +51,57 @@
     <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li> <hr>
   {{/each}}  
 </ul>
+
+
+   <section id='cafe-form' class="container">
+     <div class="row">
+     <div class="col-md-10 col-md-offset-1">
+
+       <form class="form-horizontal">
+         <fieldset>
+
+           <!-- Form Name -->
+           <legend>Add New Cafe</legend>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="name">Cafe Name</label>
+             <div class="col-md-4">
+             <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+
+             </div>
+           </div>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="cafeName">Cafe City</label>
+             <div class="col-md-4">
+             <input id="textinput" name="cafeName" type="text" placeholder="" class="form-control input-md">
+
+             </div>
+           </div>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="releaseDate">URL</label>
+             <div class="col-md-4">
+             <input id="cafeUrl" name="cafeUrl" type="text" class="form-control input-md">
+
+             </div>
+           </div>
+
+           <!-- Button -->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="singlebutton">Save New Cafe</label>
+             <div class="col-md-4">
+               <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+             </div>
+           </div>
+         </fieldset>
+       </form>
+     </div>
+     </div>
+   </section>
 
   
 </body>
