@@ -34,11 +34,30 @@ app.get('/beans/:id', function (req,res) {
 	});  		
 });
 
+app.delete("/api/beans/:beanId/cafe/:id", function (req, res) {
+	
+	var beanId = req.params.beanId;
+	var cafeId = req.params.id;
+
+	db.Bean.findOne({_id: beanId}, function (err, foundBean) {
+		
+		var foundCafe = foundBean.beanLocations.id(cafeId);
+		
+		
+		foundCafe.remove();
+		
+		foundBean.save(function(err, saved){
+			if(err) {console.log(err); }
+		 		res.json(saved);
+		 	});
+	});
+});
+
 
 app.get('/api/beans', function beansIndex(req, res) {
   db.Bean.find({}, function(err, beans) {
     res.json(beans);
-  	});
+  });
 });
 
 
@@ -59,6 +78,25 @@ app.post('/api/beans/:beanId/cafe', function (req,res) {
             res.json(bean.beanLocations);
 		});
 	});
+});
+
+app.put('/api/beans/:beanId/cafe', function (req, res) {
+  // set the value of the list and todo ids
+  var beanId = req.params.beanId;
+  var cafeId = req.params.id;
+
+  // find list in db by id
+  List.findOne({_id: beanId}, function (err, foundList) {
+    // find todo embedded in list
+    console.log(foundlist);
+    var foundCafe = foundList.cafe.id(cafeId);
+    // update todo text and completed with data from request body
+    foundCafe.text = req.body.todo.text;
+    foundCafe.completed = req.body.todo.completed;
+    foundBean.save(function (err, savedList) {
+      res.json(foundCafe);
+    });
+  });
 });
 
 app.listen(process.env.PORT || 3000, function () {
