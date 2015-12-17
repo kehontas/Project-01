@@ -1,3 +1,19 @@
-.jumbotron h1{
-	color: #5C1900;
+h1{
+	color: #4D1E00;
+	font-size: 114px;
+	font-family: Bilbo;
+	margin-left: 5%;
+	}
+
+header{
+	background-image: url("http://bgfons.com/upload/coffe_chocolate_texture1513.jpg");
+}
+body{
+	font-family: Bilbo;
+	background-color: #E0CFB4;
+}
+img {
+	height: 125px;
+	width: 200px;
+	float: right;
 }

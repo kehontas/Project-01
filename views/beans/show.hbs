@@ -21,97 +21,82 @@
     <script src="../js/app.js"></script>
   </head>
   <header>
-
+      <img src="http://i.giphy.com/ChhPZvR5BPUSQ.gif">      <h1>Café JSON</h1>
    </header>
-  <body>
-    <div class="jumbotron">   
-    
-      <div class="container">
-        <h1>Cafe JSON</h1>
-      </div>
-    </div>
-    <section class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h2>Coffee Info</h2>
-  <ul>
-    <li>Coffee Name: {{beanName}} </li>
-    <li>Origin: {{beanOrigin}}</li>
-    <li>Body: {{beanBody}}</li>
-    <li>Roast: {{beanRoast}}</li>
-    <li>Acidity: {{beanAcidity}}</li>
-    <li>Flavor: {{beanFlavor}}</li>
-    <hr>
-  </ul>
-
    
-<ul id="cafeList" style="list-style-type:none"><h3>Served at the following locations:</h3>
-  {{#each beanLocations}}
-  <div class="col-md-12">
+  <body> 
+  
+    <section class="container">
+    <a href="/">Back to Home</a>
+      <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+          <h2>Coffee Info</h2>
+            <ul>
+              <li>Coffee Name: {{beanName}} </li>
+              <li>Origin: {{beanOrigin}}</li>
+              <li>Body: {{beanBody}}</li>
+              <li>Roast: {{beanRoast}}</li>
+              <li>Acidity: {{beanAcidity}}</li>
+              <li>Flavor: {{beanFlavor}}</li>
+              <hr>
+            </ul>
+  
+  <ul id="cafeList" style="list-style-type:none">
+    <h3>Served at the following locations:</h3>
+      {{#each beanLocations}}
     <ul class="cafe" data-id="{{_id}}">
     <li>Cafe Name: {{cafeName}}</li>
     <li>Cafe City: {{cafeCity}}</li>
     <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li></ul><br> 
-    <button id="updateButton" name="updateButton" class="btn btn-primary" data-id="{{_id}}">Edit</button>
-    <button id="deleteButton" name="deleteButton" class="btn btn-danger"data-id="{{_id}}">Remove</button>
+    <button id="updateButton" name="updateButton" class="btn btn-warning" data-id="{{_id}}">Edit</button>
     <hr>
-  </div>
-  {{/each}} 
-</ul>
+    {{/each}} 
+  </ul>
 
 
-   <section id='cafe-form' class="container" data-id "{{_id}}">
-     <div class="row">
-     <div class="col-md-10 col-md-offset-1">
-
+  <section id='cafe-form' class="container" data-id "{{_id}}">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
        <form class="form-horizontal" id='newCafe'>
          <fieldset>
-
            <!-- Form Name -->
            <legend>Add A New Cafe</legend>
-
            <!-- Text input-->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="cafeName">Cafe Name</label>
-             <div class="col-md-4">
+            <div class="form-group">
+            <label class="col-md-4 control-label" for="cafeName">Cafe Name</label>
+            <div class="col-md-4">
              <input id="cafeName" name="cafeName" type="text" placeholder="" class="form-control input-md" required="">
-
-             </div>
-           </div>
+      </div>
+    </div>
 
            <!-- Text input-->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="cafeCity">Cafe City</label>
-             <div class="col-md-4">
-             <input id="cityCity" name="cafeCity" type="text" placeholder="" class="form-control input-md">
+         <div class="form-group">
+            <label class="col-md-4 control-label" for="cafeCity">Cafe City</label>
+              <div class="col-md-4">
+              <input id="cityCity" name="cafeCity" type="text" placeholder="" class="form-control input-md">
              </div>
-           </div>
+        </div>
 
            <!-- Text input-->
            <div class="form-group">
              <label class="col-md-4 control-label" for="cafeUrl">URL</label>
              <div class="col-md-4">
              <input id="cafeUrl" name="cafeUrl" type="text" class="form-control input-md">
-
              </div>
            </div>
 
            <!-- Button -->
            <div class="form-group">
              <label class="col-md-4 control-label" for="singlebutton">Save New Cafe</label>
-             <div class="col-md-4">
-               <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
-             </div>
+            <div class="col-md-4">
+              <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+            </div>
            </div>
          </fieldset>
        </form>
      </div>
-     </div>
    </section>
 <br><hr>
-<footer><p>Kehontas Rowe | November 2015</button></footer>
-
-
-  
+<footer><p>Kehontas Rowe | November 2015</button></footer> 
 </body>
 </html>
