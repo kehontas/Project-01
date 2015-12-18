@@ -42,8 +42,7 @@ app.delete("/api/beans/:beanId/cafe/:id", function (req, res) {
 	db.Bean.findOne({_id: beanId}, function (err, foundBean) {
 		
 		var foundCafe = foundBean.beanLocations.id(cafeId);
-		
-		
+			
 		foundCafe.remove();
 		
 		foundBean.save(function(err, saved){
