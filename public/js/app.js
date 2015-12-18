@@ -2,39 +2,40 @@ $(document).ready(function() {
   console.log('app.js loaded!');
    $.get('/api/beans').success(function (beans){
   	beans.forEach(function(bean) {
- 
 	  	});
 	});
 
 //http://localhost:3000/beans/5671ffc9c0bd34b3225d1edb   
 //http://localhost:3000/beans/api/beansbeans 
 //http://localhost:3000/api/beansbeans 
-$.ajax({
-  	method: "GET",
-	url: "/api/beans",
-  	success: function (data) { 	
-  	console.log("this is my data:", data);	
-  	data.forEach(function(e){
+	$.ajax({
+  		method: "GET",
+		url: "/api/beans",
+  		success: function (data) { 	
+  		console.log("this is my data:", data);	
+  			data.forEach(function(e){
   		// TODO1: append a Delete and Update button to each listing with the data-id the id of the bean entry
 		$(".beans").append("<h4><a href='/beans/"+ e._id + "'>" + e.beanName + "</a><hr>" );  			
   			});	
-	}
-});
-
-$('#newCafe').on('submit', function (event) {
-	event.preventDefault();
-	var url = window.location.href.split('/');
-	var beanId = url[url.length-1];
-	var newCafe = $('#newCafe').serialize();
-	console.log(newCafe);
-$.ajax({
-	method:"POST",
-	url: "/api/beans/" + beanId + '/cafe'  ,
-	data: newCafe,
-	success: function(data){
-		console.log(data);
 		}
 	});
+
+	$('#newCafe').on('submit', function (event) {
+		event.preventDefault();
+		var url = window.location.href.split('/');
+		var beanId = url[url.length-1];
+		var newCafe = $('#newCafe').serialize();
+			console.log(newCafe);
+
+	$.ajax({
+		method:"POST",
+		url: "/api/beans/" + beanId + '/cafe'  ,
+		data: newCafe,
+		success: function(data){
+			console.log(data);
+			}
+		});
+
 		location.reload();
 	});
 

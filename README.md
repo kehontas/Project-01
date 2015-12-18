@@ -20,6 +20,21 @@ Café JSON is an API for the coffee *connoisseur* in you!
 ![cafeJSON]
 (http://i.imgur.com/6sogAqi.png?1)
 
+Fun with Handlbars
+
+'''
+<ul id="cafeList" style="list-style-type:none">
+    <h3>Served at the following locations:</h3>
+      {{#each beanLocations}}
+    <ul class="cafe" data-id="{{_id}}">
+    <li>Cafe Name: {{cafeName}}</li>
+    <li>Cafe City: {{cafeCity}}</li>
+    <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li></ul><br> 
+    <button id="deleteButton" name="deleteButton" class="btn btn-warning" data-id="{{_id}}">Remove</button>
+    <hr>
+    {{/each}} 
+  </ul>
+'''
 
 [heroku link](https://arcane-lowlands-8512.herokuapp.com/)
 

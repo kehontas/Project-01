@@ -22,10 +22,9 @@
   </head>
   <header>
       <img src="http://i.giphy.com/ChhPZvR5BPUSQ.gif">      <h1>Café JSON</h1>
-   </header>
+  </header>
    
   <body> 
-  
     <section class="container"><a href="/">Back to Home</a>
       <div class="row">
       <div class="col-md-10 col-md-offset-1">
@@ -40,20 +39,20 @@
               <hr>
             </ul>
   
-  <ul id="cafeList" style="list-style-type:none">
-    <h3>Served at the following locations:</h3>
+     <ul id="cafeList" style="list-style-type:none">
+      <h3>Served at the following locations:</h3>
       {{#each beanLocations}}
-    <ul class="cafe" data-id="{{_id}}">
-    <li>Cafe Name: {{cafeName}}</li>
-    <li>Cafe City: {{cafeCity}}</li>
-    <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li></ul><br> 
-    <button id="deleteButton" name="deleteButton" class="btn btn-warning" data-id="{{_id}}">Remove</button>
-    <hr>
-    {{/each}} 
-  </ul>
+      <ul class="cafe" data-id="{{_id}}">
+        <li>Cafe Name: {{cafeName}}</li>
+        <li>Cafe City: {{cafeCity}}</li>
+        <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li></ul><br> 
+        <button id="deleteButton" name="deleteButton" class="btn btn-warning" data-id="{{_id}}">Remove</button>
+        <hr>
+        {{/each}} 
+      </ul>
 
 
-  <section id='cafe-form' class="container" data-id "{{_id}}">
+    <section id='cafe-form' class="container" data-id "{{_id}}">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
        <form class="form-horizontal" id='newCafe'>
@@ -92,10 +91,11 @@
             </div>
            </div>
          </fieldset>
-       </form>
-     </div>
-   </section>
-<br><hr>
+        </form>
+       </div>
+      </div>
+    </section>
+  <br><hr>
 <footer><p>Kehontas Rowe | November 2015</button></footer> 
 </body>
 </html>
