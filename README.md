@@ -21,8 +21,7 @@ Café JSON is an API for the coffee *connoisseur* in you!
 (http://i.imgur.com/6sogAqi.png?1)
 
 Fun with Handlbars
-
-'''
+    
 <ul id="cafeList" style="list-style-type:none">
     <h3>Served at the following locations:</h3>
       {{#each beanLocations}}
@@ -34,7 +33,7 @@ Fun with Handlbars
     <hr>
     {{/each}} 
   </ul>
-'''
+    
 
 [heroku link](https://arcane-lowlands-8512.herokuapp.com/)
 
