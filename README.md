@@ -18,7 +18,7 @@ Café JSON is an API for the coffee *connoisseur* in you!
 * Mongoose
 *JSON
 
-TO run:
+To run Café JSON:
 * `npm init`
 * `npm install`
 
