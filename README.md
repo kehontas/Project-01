@@ -20,7 +20,7 @@ Café JSON is an API for the coffee *connoisseur* in you!
 ![cafeJSON]
 (http://i.imgur.com/6sogAqi.png?1)
 
-Fun with Handlbars
+Fun with Handlebars
 ```
 <ul id="cafeList" style="list-style-type:none">
     <h3>Served at the following locations:</h3>
