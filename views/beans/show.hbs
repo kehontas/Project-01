@@ -26,8 +26,7 @@
    
   <body> 
   
-    <section class="container">
-    <a href="/">Back to Home</a>
+    <section class="container"><a href="/">Back to Home</a>
       <div class="row">
       <div class="col-md-10 col-md-offset-1">
           <h2>Coffee Info</h2>
@@ -48,7 +47,7 @@
     <li>Cafe Name: {{cafeName}}</li>
     <li>Cafe City: {{cafeCity}}</li>
     <li>URL: <a href="{{cafeUrl}}">{{cafeUrl}}</a></li></ul><br> 
-    <button id="updateButton" name="updateButton" class="btn btn-warning" data-id="{{_id}}">Edit</button>
+    <button id="deleteButton" name="deleteButton" class="btn btn-warning" data-id="{{_id}}">Remove</button>
     <hr>
     {{/each}} 
   </ul>
