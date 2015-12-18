@@ -4,8 +4,8 @@
 Café JSON is an API for the coffee *connoisseur* in you!
 
 **User Stories:** 
-* A user can gather information about featured coffee beans to include the name, origin, roast, acididty and flavor.
-* A user can see where this coffee is being served and add locations if needed.
+* A user can gather information about featured coffee beans to include the name, origin, roast, acidity and flavor.
+* A user can see where the coffee is being served and add/remove locations if needed.
 
 **Technologies Used:**
 * HTML/CSS
@@ -16,11 +16,16 @@ Café JSON is an API for the coffee *connoisseur* in you!
 * AJAX
 * MongoDB
 * Mongoose
+*JSON
+
+TO run:
+* `npm init`
+* `npm install`
 
 ![cafeJSON]
 (http://i.imgur.com/6sogAqi.png?1)
 
-Fun with Handlebars
+Fun with Handlebars (a fun code snippet)
 ```
 <ul id="cafeList" style="list-style-type:none">
     <h3>Served at the following locations:</h3>
@@ -35,11 +40,11 @@ Fun with Handlebars
   </ul>
   ```
 
-[heroku link](https://arcane-lowlands-8512.herokuapp.com/)
+[Café JSON on heroku](https://arcane-lowlands-8512.herokuapp.com/)
 
-[github link](https://github.com/kehontas/Project-01)
+[Café JSON on GitHub](https://github.com/kehontas/Project-01)
 
 **Future Considerations:**
 * Add more coffee data 
-* Add a way to edit new café locations
+* Add a way to new café locations
 * Include Google Maps for café locations
