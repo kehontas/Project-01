@@ -20,15 +20,17 @@
     <!-- APPLICATION SCRIPTS -->
     <script src="../js/app.js"></script>
   </head>
-  <header>
-      <img src="http://i.giphy.com/ChhPZvR5BPUSQ.gif">      <h1>Café JSON</h1>
-  </header>
+   <header>
+      <img src="http://i.giphy.com/ChhPZvR5BPUSQ.gif">      
+      <h1>Café JSON</h1>
+      <h2 id='tagline'>For the coffe connoisseur in you!</h2>
+    </header>      
    
   <body> 
     <section class="container"><a href="/">Back to Home</a>
       <div class="row">
       <div class="col-md-10 col-md-offset-1">
-          <h2>Coffee Info</h2>
+          <h2 class='heading'>Coffee Info</h2>
             <ul>
               <li>Coffee Name: {{beanName}} </li>
               <li>Origin: {{beanOrigin}}</li>
@@ -40,7 +42,7 @@
             </ul>
   
      <ul id="cafeList" style="list-style-type:none">
-      <h3>Served at the following locations:</h3>
+      <h3 class='heading'>Served at the following locations:</h3>
       {{#each beanLocations}}
       <ul class="cafe" data-id="{{_id}}">
         <li>Cafe Name: {{cafeName}}</li>
@@ -58,7 +60,7 @@
        <form class="form-horizontal" id='newCafe'>
          <fieldset>
            <!-- Form Name -->
-           <legend>Add A New Cafe</legend>
+           <legend class="heading">Add A New Cafe</legend>
            <!-- Text input-->
             <div class="form-group">
             <label class="col-md-4 control-label" for="cafeName">Cafe Name</label>

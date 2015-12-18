@@ -45,6 +45,7 @@ Fun with Handlebars (a fun code snippet)
 [Café JSON on GitHub](https://github.com/kehontas/Project-01)
 
 **Future Considerations:**
-* Add more coffee data 
-* Add a way to new café locations
+* Member Login with Profile (this will allow users to save coffees and cafés they've enjoyed or would like to try)
+* edit a café
+* continue to add a picks of the month (picks of the month can be user or admin generated)
 * Include Google Maps for café locations

@@ -1,19 +1,32 @@
-h1{
+h1 {
 	color: #4D1E00;
 	font-size: 114px;
 	font-family: Bilbo;
 	margin-left: 5%;
 	}
 
-header{
+header {
 	background-image: url("http://bgfons.com/upload/coffe_chocolate_texture1513.jpg");
 }
-body{
+
+body {
 	font-family: Bilbo;
 	background-color: #E0CFB4;
+	color: #2C0E07;
 }
+
 img {
-	height: 125px;
-	width: 200px;
+	height: 178px;
+	width: 225px;
 	float: right;
+}
+
+#tagline {
+	color: #34130A;
+	font-family: Brush Script MT;
+	margin-left: 45%;
+}
+
+.heading {
+	color: #4D1E00;	
 }
